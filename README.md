@@ -16,7 +16,7 @@ yarn add @deliverables/capacitor-location
 ## Usage
 
 ```tsx
-import { useCapacitorLocation } from '@deliverable/capacitor-location'
+import { useCapacitorLocation } from '@deliverables/capacitor-location'
 
 const { coords, removeLocationWatcher, removeBackgroundLocationWatcher } =
   useCapacitorLocation({

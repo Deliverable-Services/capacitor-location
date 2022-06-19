@@ -1,18 +1,22 @@
 import React from 'react'
-import {
-  Location as CapacitorLocation,
-  useCapacitorLocation
-} from '@deliverable/capacitor-location'
+import { useCapacitorLocation } from '@deliverable/capacitor-location'
+import { Capacitor } from '@capacitor/core'
 
 const App = () => {
-  const { coords } = useCapacitorLocation()
+  const { coords, removeLocationWatcher } = useCapacitorLocation({
+    watchForBackgroundLocation: true,
+    onError: (error) => {
+      alert('Error: ' + error.message)
+    }
+  })
   return (
     <div>
       <h1>Hello I'm using Capacitor locatoin</h1>
-      <CapacitorLocation />
 
-      <h1>This is the web location</h1>
+      <h1>This is the {Capacitor.getPlatform()} location</h1>
       <pre>{JSON.stringify(coords)}</pre>
+
+      <button onClick={removeLocationWatcher}>Remove location watcher</button>
     </div>
   )
 }

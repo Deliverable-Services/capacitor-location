@@ -1,21 +1,18 @@
 import React from 'react'
-
-import { Button, Input } from 'atomikku'
-import 'atomikku/dist/index.css'
+import {
+  Location as CapacitorLocation,
+  useCapacitorLocation
+} from '@deliverable/capacitor-location'
 
 const App = () => {
+  const { coords } = useCapacitorLocation()
   return (
     <div>
-      <h1>
-        Hello I'm a documentation website for atomikku
-        <span role={'img'} aria-label='rocket'>
-          {' '}
-          🚀
-        </span>
-      </h1>
-      <Button>Click Me</Button>
-      <br />
-      <Input type='password' placeholder='Input from atomikku' />
+      <h1>Hello I'm using Capacitor locatoin</h1>
+      <CapacitorLocation />
+
+      <h1>This is the web location</h1>
+      <pre>{JSON.stringify(coords)}</pre>
     </div>
   )
 }

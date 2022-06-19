@@ -1,6 +1,6 @@
-# atomikku
+# Geolocation for web, android and ios.
 
-> React UI library
+> React library
 
 [![NPM](https://img.shields.io/npm/v/atomikku.svg)](https://www.npmjs.com/package/atomikku) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

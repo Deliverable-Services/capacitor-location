@@ -1,14 +1,16 @@
 # Geolocation for web, android and ios.
 
-> React library
+> React library for fetching location on web, android and ios using capacitor js.
 
-[![NPM](https://img.shields.io/npm/v/atomikku.svg)](https://www.npmjs.com/package/atomikku) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@deliverables/capacitor-location.svg)](https://www.npmjs.com/package/@deliverables/capacitor-location) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save @deliverable/capacitor-location
-yarn add @deliverable/capacitor-location
+npm install --save @deliverables/capacitor-location
+
+yarn add @deliverables/capacitor-location
+
 ```
 
 ## Usage

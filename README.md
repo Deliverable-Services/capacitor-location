@@ -7,20 +7,28 @@
 ## Install
 
 ```bash
-npm install --save atomikku
+npm install --save @deliverable/capacitor-location
+yarn add @deliverable/capacitor-location
 ```
 
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import { useCapacitorLocation } from '@deliverable/capacitor-location'
 
-import { Button } from 'atomikku'
-import 'atomikku/dist/index.css'
-
-const App = () => {
-  return <Button>Click Me</Button>
-}
+const { coords, removeLocationWatcher, removeBackgroundLocationWatcher } =
+  useCapacitorLocation({
+    watchForBackgroundLocation: true,
+    onBackgroundLocationChange: (location) => {
+      console.log('Background location changed', location)
+    },
+    onError: (error) => {
+      alert('Error: ' + error.message)
+    },
+    onBackgroundLocationError(error) {
+      alert('Background location error: ' + error.message)
+    }
+  })
 ```
 
 ## License
